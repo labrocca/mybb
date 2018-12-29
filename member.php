@@ -1849,7 +1849,7 @@ if($mybb->input['action'] == "resetpassword")
 				break;
 		}
 
-		$code = $mybb->get_input('code');
+		$code = htmlspecialchars_uni($mybb->get_input('code'));
 
 		if(!isset($user['username']))
 		{
